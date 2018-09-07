@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\aaron.jpg" />
+    <None Remove="Resources\aaron.png" />
+    <None Remove="Resources\bethmike.png" />
+    <None Remove="Resources\ellie.png" />
+    <None Remove="Resources\gusmanopic.png" />
+    <None Remove="Resources\ianandpip.jpg" />
+    <None Remove="Resources\ianandpip.png" />
+    <None Remove="Resources\micky.png" />
+    <None Remove="Resources\peachybutt.png" />
+    <None Remove="Resources\piccolo.png" />
+    <None Remove="Resources\prb.png" />
+    <None Remove="Resources\trouble..png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\aaron.jpg" />
+    <EmbeddedResource Include="Resources\bethmike.png" />
+    <EmbeddedResource Include="Resources\ellie.png" />
+    <EmbeddedResource Include="Resources\gusmanopic.png" />
+    <EmbeddedResource Include="Resources\ianandpip.jpg" />
+    <EmbeddedResource Include="Resources\micky.png" />
+    <EmbeddedResource Include="Resources\peachybutt.png" />
+    <EmbeddedResource Include="Resources\piccolo.png" />
+    <EmbeddedResource Include="Resources\prb.png" />
+    <EmbeddedResource Include="Resources\trouble..png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
